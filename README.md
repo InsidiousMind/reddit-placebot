@@ -2,16 +2,17 @@
 
 This is a bot I made for the Reddit [/r/place](https://www.reddit.com/r/place/) event of 2017 April Fools Day.
 
-I made this bot to protect our national flag on [/r/argentina](https://www.reddit.com/r/argentina/)
+This is the bot for /r/polska and /r/poland to protect our national flag. Big thanks to /r/argentina who made this bot to begin with
+Original Repository of Bot: https://github.com/Zequez/reddit-placebot
 
-![This is how it looks now, but it might change when you read it, visit the placebot-argentina-target repo to see how it actually is right now](https://raw.githubusercontent.com/Zequez/reddit-placebot/master/current_target_that_might_not_be_updated.png)
+###THIS BOT IS SETUP FOR THE POLISH FLAG AT (0,133)
 
 ## Installation
 
 You need to have [NodeJS installed](https://nodejs.org)
 
 ```
-git clone https://github.com/zequez/reddit-place-bot
+git clone https://github.com/InsidiousMind/reddit-placebot
 cd reddit-place-bot
 npm install
 ```
@@ -19,13 +20,16 @@ npm install
 ## Configuration
 
 Change `users.example.json` to `users.json` and add your username and password
-of your account and all your throwaways.
+of your account and all your throwaways. Make sure the format is correct and exactly as the example.
+
+If you have a trailing comma on the last entry, or something like that, NPM will throw an error and
+the bot will *NOT* work.
 
 ## Target Drawing
 
-If you run it as it is, is going to connect to the [placebot-argentina-target](https://github.com/Zequez/placebot-argentina-target) repository and try to draw
+If you run it as it is, is going to connect to the [placebot-polska-target](https://github.com/InsidiousMind/placebot-polska-target) repository and try to draw
 the `official_target.bmp`. If you don't want to do that you can open `config.js` and
-set `autoupdateRemoteTarget: false`. This will make it use `target.bmp` instead. 
+set `autoupdateRemoteTarget: false`. This will make it use `target.bmp` instead.
 
 Every time it's time to place a pixel the bot will download the board
 (and latest remote target) and find the first pixel that doesn't match
